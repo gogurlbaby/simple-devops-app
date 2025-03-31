@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("./app"); // Import app without starting server
+const app = require("./api/index"); // Import app without starting server
 
 describe("GET /", () => {
   it('should return "Hello, DevOps!"', async () => {
