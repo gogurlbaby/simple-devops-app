@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("./app"); // Assuming app.js is in the same directory
+const app = require("./app"); // Import app without starting server
 
 describe("GET /", () => {
   it('should return "Hello, DevOps!"', async () => {
