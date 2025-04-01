@@ -10,11 +10,11 @@ COPY package*.json ./
 # Step 4: Install the dependencies
 RUN npm install
 
-# Step 5: Copy the rest of the application files
-COPY . .
+# Step 5: Copy the rest of the application files from the api folder
+COPY ./api ./
 
 # Step 6: Expose the port the app will run on
 EXPOSE 3000
 
-# Step 7: Start the app
-CMD ["npm", "start"]
+# Step 7: Start the app, make sure it uses the correct entry point (index.js)
+CMD ["node", "index.js"]
